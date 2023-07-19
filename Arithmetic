@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class Main {
+
+    public static void  main(String[] args) {
+        int add = 5 + 5;
+        int subtract = 10 - 5;
+        double divide = (double) 10 / (double) 3;
+        int multiply = 5 * 5;
+        int x = 1;
+        x++;
+
+        System.out.println(add);
+        System.out.println(subtract);
+        System.out.println(divide);
+        System.out.println(multiply);
+        System.out.println(x);
+
+    }
+}
