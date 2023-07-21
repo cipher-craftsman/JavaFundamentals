@@ -1,0 +1,123 @@
+public class CoffeeMachine {
+    private WaterTank waterTank;
+    private WaterPipe waterPipe;
+    private NonZeroReturnPipe returnPipe;
+    private HeatingElement heatingElement;
+    private HotPlate hotPlate;
+    private Filter filter;
+    private Clock clock;
+    private MilkTank milkTank;
+
+    public CoffeeMachine() {
+        waterTank = new WaterTank();
+        waterPipe = new WaterPipe();
+        returnPipe = new NonZeroReturnPipe();
+        heatingElement = new HeatingElement();
+        hotPlate = new HotPlate();
+        filter = new Filter();
+        clock = new Clock();
+        milkTank = new MilkTank();
+    }
+
+    public void start() {
+        if (clock.isTimeToStart()) {
+            System.out.println("Starting the coffee machine.");
+            // Implement the logic to brew coffee here
+            // e.g., check water level, milk availability, etc.
+        } else {
+            System.out.println("It's not time to start the coffee machine yet.");
+        }
+    }
+
+    // Inner classes representing the objects in the CoffeeMachine
+    private class WaterTank {
+        // Properties and methods related to the water tank
+        // ...
+    }
+
+    private class WaterPipe {
+        // Properties and methods related to the water pipe
+        // ...
+    }
+
+    private class NonZeroReturnPipe {
+        // Properties and methods related to the non-zero return pipe
+        // ...
+    }
+
+    private class HeatingElement {
+        // Properties and methods related to the heating element
+        // ...
+    }
+
+    private class HotPlate {
+        // Properties and methods related to the hot plate
+        // ...
+    }
+
+    private class Filter {
+        // Properties and methods related to the filter
+        // ...
+    }
+
+    private class Clock {
+        private int hour;
+        private int minute;
+
+        public Clock() {
+            hour = 8; // Set default time to 8:00 AM
+            minute = 0;
+        }
+
+        public void setTime(int hour, int minute) {
+            this.hour = hour;
+            this.minute = minute;
+        }
+
+        public boolean isTimeToStart() {
+            return hour >= 8 && hour < 18; // Machine can only start between 8 AM to 6 PM
+        }
+    }
+
+    private class MilkTank {
+        private String type;
+        private int capacity;
+        private int currentLevel;
+
+        public MilkTank() {
+            type = "Regular Milk"; // Default milk type
+            capacity = 1000; // Set the capacity in milliliters
+            currentLevel = capacity; // Initially, the milk tank is full
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public void fillMilk(int amount) {
+            currentLevel = Math.min(currentLevel + amount, capacity);
+        }
+
+        public void useMilk(int amount) {
+            currentLevel = Math.max(currentLevel - amount, 0);
+        }
+
+        // Add more methods as needed, e.g., for checking milk level, checking type, etc.
+    }
+
+    public static void main(String[] args) {
+        CoffeeMachine coffeeMachine = new CoffeeMachine();
+
+        // Set the clock time (for demonstration purposes)
+        coffeeMachine.clock.setTime(10, 30);
+
+        // Set the milk type (for demonstration purposes)
+        coffeeMachine.milkTank.setType("Almond Milk");
+
+        // Fill the milk tank (for demonstration purposes)
+        coffeeMachine.milkTank.fillMilk(200);
+
+        // Start the coffee machine
+        coffeeMachine.start();
+    }
+}
