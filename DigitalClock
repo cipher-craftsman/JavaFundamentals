@@ -13,6 +13,8 @@ public class DigitalClock {
         System.out.println("Current Time: " + currentTime);
     }
 
-    
+    public static void timeZone() {
+        TimeZone timeZone = TimeZone.getDefault();
+        System.out.println("Time Zone: " + timeZone);
     }
 }
