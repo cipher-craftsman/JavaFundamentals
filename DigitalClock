@@ -12,9 +12,7 @@ public class DigitalClock {
         Time currentTime = new Time(System.currentTimeMillis());
         System.out.println("Current Time: " + currentTime);
     }
-    public static void timeZone() {
-        TimeZone timeZone = TimeZone.getDefault();
-        System.out.println("Time Zone: " + timeZone);
+    
     
     }
 }
