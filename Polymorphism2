@@ -1,0 +1,29 @@
+class Car {
+    public void move() {
+        System.out.println("forward");
+    }
+}
+class BMW extends Car {
+    public void move() {
+        System.out.println("front front");
+    }
+
+}
+
+class Mercedes_Benz extends  Car {
+    public void move() {
+        System.out.println("back back");
+    }
+
+}
+
+public class Polymorphism2 {
+    public static void main(String[] args) {
+        Car a = new Car();
+        a.move();
+        BMW b = new BMW();
+        b.move();
+        Mercedes_Benz c = new Mercedes_Benz();
+        c.move();
+    }
+}
