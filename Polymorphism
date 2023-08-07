@@ -1,0 +1,46 @@
+
+class Animal {
+    public void sound() {
+        System.out.println("moo moo moo");
+    }
+}
+
+class Dog extends Animal {
+    public void sound() {
+        System.out.println("hoo hoo hoo");
+    }
+}
+
+class Bird extends  Animal {
+    public  void sound() {
+        System.out.println("tweet tweet tweet");
+    }
+
+}
+class Snake extends Animal {
+    public  void sound() {
+        System.out.println("tss tss tss");
+    }
+}
+
+class Cat extends  Animal {
+    public void sound() {
+        System.out.println("meow meow meow");
+
+    }
+}
+public class Polymorphism {
+    public static void main(String[] args) {
+        Animal a = new Animal();
+        a.sound();
+        Dog b = new Dog();
+        b.sound();
+        Bird c = new Bird();
+        c.sound();
+        Cat d = new Cat();
+        d.sound();
+        Snake e = new Snake();
+        e.sound();
+
+    }
+}
