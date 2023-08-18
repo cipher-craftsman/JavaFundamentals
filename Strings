@@ -15,7 +15,6 @@ public class Main {
         System.out.println(message.hashCode());
         System.out.println(message.replace("Lili and her Buza", "Odd numbers"));
 
-    }
-}
+
 
 
