@@ -16,5 +16,3 @@ public class DigitalClock {
         TimeZone timeZone = TimeZone.getDefault();
         System.out.println("Time Zone: " + timeZone);
 
-    }
-}
